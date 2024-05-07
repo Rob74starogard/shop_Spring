@@ -13,11 +13,6 @@ public class ProductController {
     private final Productmanager productmanager;
     private final ProductRepository productRepository;
 
-    /*@PostMapping
-    public void addProduct(@RequestBody ProductEntity productEntity){
-        productRepository.save(productEntity);
-    }*/
-
     @PostMapping
     public void addProduct(@RequestBody ProductDto productDto){
         productmanager.productAdd(productDto);
