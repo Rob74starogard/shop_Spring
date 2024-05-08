@@ -7,10 +7,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class ProductMapperInTwoDirections {
     public ProductDto fromEntity(ProductEntity productEntity) {
-        return new ProductDto(productEntity.getId(),productEntity.getName(), productEntity.getQuantity());
+        return new ProductDto(productEntity.getId(), productEntity.getName(), productEntity.getQuantity());
     }
 
     public ProductEntity toEntity(ProductDto productDto) {
-        return new ProductEntity(productDto.getId(),productDto.getName(), productDto.getQuantity());
+        return new ProductEntity(productDto.getId(), productDto.getName(), productDto.getQuantity());
     }
 }
