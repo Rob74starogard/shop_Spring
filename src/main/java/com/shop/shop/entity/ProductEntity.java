@@ -18,7 +18,8 @@ public class ProductEntity {
     @Column(name = "QUANTITY")
     private int quantity;
 
-    public ProductEntity(String name, int quantity) {
+    public ProductEntity(Long id,String name, int quantity) {
+        this.id = id;
         this.name = name;
         this.quantity = quantity;
     }
