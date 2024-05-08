@@ -1,7 +1,7 @@
 package com.shop.shop.service;
 
 import com.shop.shop.entity.ProductEntity;
-import com.shop.shop.mapper.MapperInTwoDirections;
+import com.shop.shop.mapper.ProductMapperInTwoDirections;
 import com.shop.shop.model.ProductDto;
 import com.shop.shop.repository.ProductRepository;
 import lombok.Getter;
@@ -13,9 +13,9 @@ import java.util.List;
 public class Productmanager {
     @Getter
     private ProductRepository productRepository;
-    private MapperInTwoDirections mapperInTwoDirections;
+    private ProductMapperInTwoDirections mapperInTwoDirections;
 
-    public Productmanager(ProductRepository productRepository, MapperInTwoDirections mapperInTwoDirections) {
+    public Productmanager(ProductRepository productRepository, ProductMapperInTwoDirections mapperInTwoDirections) {
         this.productRepository = productRepository;
         this.mapperInTwoDirections = mapperInTwoDirections;
     }

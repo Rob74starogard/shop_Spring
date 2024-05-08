@@ -5,7 +5,7 @@ import com.shop.shop.model.ProductDto;
 import org.springframework.stereotype.Component;
 
 @Component
-public class MapperInTwoDirections {
+public class ProductMapperInTwoDirections {
     public ProductDto fromEntity(ProductEntity productEntity) {
         return new ProductDto(productEntity.getId(),productEntity.getName(), productEntity.getQuantity());
     }
