@@ -15,8 +15,8 @@ public class OrderController {
 
 
     @PostMapping
-    public void addOrder(@RequestBody OrderDto orderDto){
-        ordermanager.orderAdd(orderDto);
+    public void addOrder(@RequestBody Long id,  int quantity){
+        ordermanager.orderCreate(id, quantity);
     }
     @GetMapping("/getall")
     public List<OrderDto> getOrders(){

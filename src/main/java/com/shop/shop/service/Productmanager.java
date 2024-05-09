@@ -31,4 +31,18 @@ public class Productmanager {
                 .map(mapperInTwoDirections::fromEntity)
                 .toList();
     }
+
+    public ProductEntity getById(Long id) {
+        return productRepository.getReferenceById(id);
+    }
+
+    public void deacreseQuantity(ProductEntity productEntity, int entityNumber) {
+        int difference = productEntity.getQuantity() - entityNumber;
+        if (difference > 0) {
+            productEntity.setQuantity(difference);
+        }
+        if (difference==0){
+            productRepository.delete(productEntity);
+        }
+    }
 }

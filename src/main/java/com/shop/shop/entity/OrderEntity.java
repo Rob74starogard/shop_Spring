@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Getter
-@Table(name = "ORDER")
+@Table(name = "ORDER_no")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 
 public class OrderEntity {
